@@ -9,16 +9,13 @@
         <h2><a href="">First blog</a> </h2>
     </div>
 
-    <div>
-        <p>published :  2021.09.27</p>
-        <h2><a href="">First post</a></h2>
-        <p>dasdasdas</p>
-    </div>
+    {% for post in posts %}
+        <div>
+            <p>published:{{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
 
-    <div>
-        <p>published : 2021.09.27</p>
-        <h2><a href="">Second post</a> </h2>
-        <p>fdasszcvz</p>
-    </div>
 </body>
 </html>
